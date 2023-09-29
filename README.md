@@ -1,0 +1,20 @@
+### 我的公网ip
+39.105.216.166      
+http://39.105.216.166/
+***     
+
+## 所有操作基于centsOS端操作
+#### 安装Apache      
+yum -y install httpd        
+
+#### 启动Apache：输入
+service httpd start     
+注意：Linux7后代码有所不同，第四步这里会提示输入    
+/bin/systemctl start httpd.service
+
+#### 打开浏览器，输入http://加公网IP，出现Apache测试页说明搭建成功      
+注意：这里为第一次搭建时无法访问公网IP，评论区说检查安全组是否添加80端口入连接      
+
+### 通过FileZilla       
+界面左边分别是本地电脑目录和文件，右边是ECS目录和文件，将网站所有文件拖动到右边/var/www/html文件夹下，等待上传完毕即可      
+此时在浏览器里输入公网IP即可显示发布的网页
